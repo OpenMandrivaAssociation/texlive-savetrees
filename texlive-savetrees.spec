@@ -54,6 +54,7 @@ page-length requirement for a conference or journal submission.
 #- source
 %doc %{_texmfdistdir}/source/latex/savetrees/savetrees.dtx
 %doc %{_texmfdistdir}/source/latex/savetrees/savetrees.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -64,3 +65,5 @@ page-length requirement for a conference or journal submission.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
