@@ -6,7 +6,7 @@
 # catalog-version 2.0
 Name:		texlive-savetrees
 Version:	2.0
-Release:	1
+Release:	2
 Summary:	Pack as much as possible onto each page of a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/savetrees
