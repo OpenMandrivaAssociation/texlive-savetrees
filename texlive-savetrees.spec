@@ -1,12 +1,12 @@
-# revision 22491
+# revision 29841
 # category Package
 # catalog-ctan /macros/latex/contrib/savetrees
-# catalog-date 2011-05-15 09:57:20 +0200
+# catalog-date 2013-04-10 07:27:56 +0200
 # catalog-license lppl
-# catalog-version 2.0
+# catalog-version 2.1
 Name:		texlive-savetrees
-Version:	2.0
-Release:	2
+Version:	2.1
+Release:	1
 Summary:	Pack as much as possible onto each page of a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/savetrees
@@ -41,6 +41,7 @@ page-length requirement for a conference or journal submission.
 %{_texmfdistdir}/tex/latex/savetrees/savetrees.sty
 %doc %{_texmfdistdir}/doc/latex/savetrees/README
 %doc %{_texmfdistdir}/doc/latex/savetrees/savetrees.pdf
+%doc %{_texmfdistdir}/doc/latex/savetrees/st-sample2e.pdf
 #- source
 %doc %{_texmfdistdir}/source/latex/savetrees/savetrees.dtx
 %doc %{_texmfdistdir}/source/latex/savetrees/savetrees.ins
@@ -54,17 +55,3 @@ page-length requirement for a conference or journal submission.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.0-2
-+ Revision: 755795
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.0-1
-+ Revision: 719486
-- texlive-savetrees
-- texlive-savetrees
-- texlive-savetrees
-- texlive-savetrees
-
