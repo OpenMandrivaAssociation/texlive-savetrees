@@ -1,12 +1,6 @@
-# revision 29841
-# category Package
-# catalog-ctan /macros/latex/contrib/savetrees
-# catalog-date 2013-04-10 07:27:56 +0200
-# catalog-license lppl
-# catalog-version 2.1
 Name:		texlive-savetrees
-Version:	2.1
-Release:	9
+Version:	2.4
+Release:	1
 Summary:	Pack as much as possible onto each page of a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/savetrees
@@ -37,14 +31,11 @@ page-length requirement for a conference or journal submission.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/bibtex/bst/savetrees/savetrees.bst
-%{_texmfdistdir}/tex/latex/savetrees/savetrees.sty
-%doc %{_texmfdistdir}/doc/latex/savetrees/README
-%doc %{_texmfdistdir}/doc/latex/savetrees/savetrees.pdf
-%doc %{_texmfdistdir}/doc/latex/savetrees/st-sample2e.pdf
+%{_texmfdistdir}/bibtex/bst/savetrees
+%{_texmfdistdir}/tex/latex/savetrees
+%doc %{_texmfdistdir}/doc/latex/savetrees
 #- source
-%doc %{_texmfdistdir}/source/latex/savetrees/savetrees.dtx
-%doc %{_texmfdistdir}/source/latex/savetrees/savetrees.ins
+%doc %{_texmfdistdir}/source/latex/savetrees
 
 #-----------------------------------------------------------------------
 %prep
