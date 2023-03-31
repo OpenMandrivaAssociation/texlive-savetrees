@@ -1,6 +1,6 @@
 Name:		texlive-savetrees
 Version:	40525
-Release:	1
+Release:	2
 Summary:	Pack as much as possible onto each page of a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/savetrees
