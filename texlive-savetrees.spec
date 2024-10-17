@@ -3,7 +3,7 @@ Version:	40525
 Release:	2
 Summary:	Pack as much as possible onto each page of a LaTeX document
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/savetrees
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/savetrees
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/savetrees.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/savetrees.doc.r%{version}.tar.xz
