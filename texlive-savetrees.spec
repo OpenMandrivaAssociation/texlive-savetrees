@@ -1,50 +1,28 @@
-Name:		texlive-savetrees
-Version:	40525
-Release:	2
-Summary:	Pack as much as possible onto each page of a LaTeX document
+%global tl_name savetrees
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.4
+Release:	%{tl_revision}.1
+Summary:	Optimise the use of each page of a LaTeX document
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/savetrees
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/savetrees.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/savetrees.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/savetrees.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/savetrees.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/savetrees.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/savetrees.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	make
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The goal of the savetrees package is to pack as much text as
-possible onto each page of a LaTeX document. Admittedly, this
-makes the document far less attractive. Nevertheless, savetrees
-is a simple way to save paper when printing draft copies of a
-document. It can also be useful when trying to meet a tight
-page-length requirement for a conference or journal submission.
+The goal of the savetrees package is to pack as much text as possible
+onto each page of a LaTeX document. Admittedly, this makes the document
+far less attractive. Nevertheless, savetrees is a simple way to save
+paper when printing draft copies of a document. It can also be useful
+when trying to meet a tight page-length requirement for a conference or
+journal submission. Most of the package options cover specific
+modifications to typesetting rules, but there are also options subtle,
+moderate and extreme options for the "broad brush" approach.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/bibtex/bst/savetrees
-%{_texmfdistdir}/tex/latex/savetrees
-%doc %{_texmfdistdir}/doc/latex/savetrees
-#- source
-%doc %{_texmfdistdir}/source/latex/savetrees
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
